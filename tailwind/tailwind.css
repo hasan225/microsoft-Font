@@ -1,0 +1,60 @@
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+   left: 40%;
+   right: auto;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+   right: 40%;
+   left: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   position: absolute;
+   top: 96%;
+   width: calc(var(--swiper-navigation-size)/ 44 * 27);
+   height: var(--swiper-navigation-size);
+   margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+   z-index: 10;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+   width: fit-content;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   font-size: 25px !important;
+   font-weight: bold;
+}
+
+
+.toggle ion-icon {
+   --ionicon-stroke-width: 40px;
+}
+
+.toggleActive {
+   transform: scaleY(1) !important;
+}
+
+@media (max-width:1024px) {
+     .shopImg {
+      transform:rotateY(180deg)
+     }
+}
